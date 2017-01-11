@@ -13,12 +13,18 @@
         .module('chartsTestApp.modules.analytics')
         .controller('AnalyticsController', AnalyticsController);
 
-    AnalyticsController.$inject = ['ChartService'];
+    AnalyticsController.$inject = ['ChartService', '$interval'];
 
-    function AnalyticsController(ChartService) {
+    function AnalyticsController(ChartService, $interval) {
         var vm = this;
         vm.doughnutData = ChartService.getDoughnutData();
         vm.barData = ChartService.getBarData();
         vm.lineData = ChartService.getLineData();
+
+        $interval(function() {
+            vm.doughnutData = ChartService.getDoughnutData();
+            vm.barData = ChartService.getBarData();
+            vm.lineData = ChartService.getLineData();
+        }, 60000);
     }
 })();

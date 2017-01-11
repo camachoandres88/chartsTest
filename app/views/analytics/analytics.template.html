@@ -1,12 +1,16 @@
 <div class="line-chart">
-    <canvas class="chart chart-line" chart-data="analyticsCtrl.lineData.data" chart-labels="analyticsCtrl.lineData.labels" chart-series="analyticsCtrl.lineData.series" chart-options="analyticsCtrl.lineData.options">
-</canvas>
+    <div>
+        <canvas class="chart chart-line" chart-data="analyticsCtrl.lineData.data" chart-labels="analyticsCtrl.lineData.labels" chart-series="analyticsCtrl.lineData.series" chart-options="analyticsCtrl.lineData.options">
+        </canvas>
+    </div>
 </div>
-<div class="bar-chart">
-    <canvas class="chart chart-bar" chart-options="analyticsCtrl.barData.options" chart-data="analyticsCtrl.barData.data" chart-labels="analyticsCtrl.barData.labels" chart-series="analyticsCtrl.barData.series">
+<div class="bottom-charts-container">
+    <div class="bar-chart">
+        <canvas class="chart chart-bar" chart-options="analyticsCtrl.barData.options" chart-data="analyticsCtrl.barData.data" chart-labels="analyticsCtrl.barData.labels" chart-series="analyticsCtrl.barData.series">
     </canvas>
-</div>
-<div class="doughnut-chart">
-    <canvas class="chart chart-doughnut" chart-options="analyticsCtrl.doughnutData.options" chart-data="analyticsCtrl.doughnutData.data" chart-labels="analyticsCtrl.doughnutData.labels">
+    </div>
+    <div class="doughnut-chart">
+        <canvas class="chart chart-doughnut" chart-options="analyticsCtrl.doughnutData.options" chart-data="analyticsCtrl.doughnutData.data" chart-labels="analyticsCtrl.doughnutData.labels">
     </canvas>
+    </div>
 </div>

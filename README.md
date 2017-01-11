@@ -1,12 +1,15 @@
-# charts-test
+Ejecutar los siguientes comandos para correr el proyecto:
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.15.1.
+  bower install
+  npm install
+  grunt build
 
-## Build & development
+Para lanzar el server en modo desarrollo ejecutar lo siguiente :
 
-Run `grunt` for building and `grunt serve` for preview.
+  grunt serve
 
-## Testing
+Para lanzar el server con archivos de distribucion ejecutar lo siguiente:
 
-Running `grunt test` will run the unit tests with karma.
+  grunt serve:dist
+
+

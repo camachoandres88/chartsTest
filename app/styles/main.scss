@@ -1,136 +1,172 @@
-            @import "variables.scss";
-            @font-face {
+@import "variables.scss";
+@font-face {
+    font-family: ProximaNova;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    src: url("/styles/fonts/proxima-nova-semibold.otf") format("opentype");
+}
+
+body {
+    background-color: $backgroundColor;
+    padding: 0;
+    margin: 0;
+    header {
+        width: 100%;
+        height: 61px;
+        .copy-rockker-labs {
+            width: 264px;
+            height: 60px;
+            background-color: $copyColor;
+            float: left;
+            img {
+                width: 169px;
+                height: 20px;
+                object-fit: contain;
+                box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+                margin: 20px 48px;
+            }
+        }
+    }
+    aside {
+        background-color: $headerColor;
+        .search {
+            border-bottom: solid 2px $grayBorder;
+            margin: 17px 24px;
+            input {
+                background: transparent;
+                border: transparent;
+                height: 19px;
                 font-family: ProximaNova;
-                font-weight: normal;
-                font-style: normal;
-                font-stretch: normal;
-                src: url("/styles/fonts/proxima-nova-semibold.otf") format("opentype");
+                font-size: 16px;
+                text-align: left;
+                color: $softGrayFontColor;
+                padding: 10px;
+                &:focus {
+                    outline: none;
+                }
             }
+        }
+        .menu {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            .menu-item {
+                cursor: pointer;
+                padding: 17px 24px;
+                &.active {
+                    background-color: $copyColor;
+                }
+                span {
+                    height: 19px;
+                    font-family: ProximaNova;
+                    font-size: 16px;
+                    font-weight: 600;
+                    text-align: left;
+                    color: $whiteColor;
+                }
+                img {
+                    object-fit: contain;
+                    padding: 0px 10px;
+                    width: 18px;
+                    &.analitycs {
+                        height: 11px;
+                    }
+                    &.newspaper-o {
+                        height: 11px;
+                    }
+                    &.board-brief {
+                        height: 15px;
+                    }
+                    &.briefcase {
+                        height: 14px;
+                    }
+                }
+            }
+        }
+        .collapse-item {
+            cursor: pointer;
+            margin-top: 100px;
+            padding: 17px 24px;
+            span {
+                height: 19px;
+                font-family: ProximaNova;
+                font-size: 16px;
+                font-weight: 600;
+                text-align: left;
+                color: $whiteColor;
+            }
+            img {
+                object-fit: contain;
+                padding: 0px 10px;
+                width: 9px;
+                height: 9px;
+            }
+        }
+    }
+    section {
+        .line-chart {
+            margin: 30px;
+            padding: 20px;
+            background-color: $whiteColor;
+        }
+        .bottom-charts-container {
+            margin: 30px;
+            .bar-chart {
+                padding: 20px;
+                background-color: $whiteColor;
+            }
+            .doughnut-chart {
+                padding: 20px;
+                background-color: $whiteColor;
+            }
+        }
+    }
+}
 
-            body {
-                background-color: $backgroundColor;
-                padding: 0;
-                margin: 0;
-                header {
-                    width: 100%;
-                    height: 61px;
-                    background-color: $headerColor;
-                    .copy-rockker-labs {
-                        width: 264px;
-                        height: 60px;
-                        background-color: $copyColor;
-                        float: left;
-                        img {
-                            width: 169px;
-                            height: 20px;
-                            object-fit: contain;
-                            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
-                            margin: 20px 48px;
-                        }
-                    }
-                }
-                aside {
-                    width: 264px;
-                    height: 740px;
-                    background-color: $headerColor;
-                    float: left;
-                    .search {
-                        border-bottom: solid 2px $grayBorder;
-                        margin: 17px 24px;
-                        input {
-                            background: transparent;
-                            border: transparent;
-                            height: 19px;
-                            font-family: ProximaNova;
-                            font-size: 16px;
-                            text-align: left;
-                            color: $softGrayFontColor;
-                            padding: 10px;
-                            &:focus {
-                                outline: none;
-                            }
-                        }
-                    }
-                    .menu {
-                        padding: 0;
-                        margin: 0;
-                        list-style-type: none;
-                        .menu-item {
-                            cursor: pointer;
-                            padding: 17px 24px;
-                            &.active {
-                                background-color: $copyColor;
-                            }
-                            span {
-                                height: 19px;
-                                font-family: ProximaNova;
-                                font-size: 16px;
-                                font-weight: 600;
-                                text-align: left;
-                                color: $whiteColor;
-                            }
-                            img {
-                                object-fit: contain;
-                                padding: 0px 10px;
-                                width: 18px;
-                                &.analitycs {
-                                    height: 11px;
-                                }
-                                &.newspaper-o {
-                                    height: 11px;
-                                }
-                                &.board-brief {
-                                    height: 15px;
-                                }
-                                &.briefcase {
-                                    height: 14px;
-                                }
-                            }
-                        }
-                    }
-                    .collapse-item {
-                        cursor: pointer;
-                        margin-top: 100px;
-                        padding: 17px 24px;
-                        span {
-                            height: 19px;
-                            font-family: ProximaNova;
-                            font-size: 16px;
-                            font-weight: 600;
-                            text-align: left;
-                            color: $whiteColor;
-                        }
-                        img {
-                            object-fit: contain;
-                            padding: 0px 10px;
-                            width: 9px;
-                            height: 9px;
-                        }
-                    }
-                }
-                section {
-                    float: left;
-                }
+@media screen and (min-width: 768px) {
+    header {
+        background-color: $headerColor;
+    }
+    aside {
+        width: 264px;
+        height: 100%;
+        position: absolute;
+    }
+    section {
+        margin-left: 264px;
+        overflow: scroll;
+        width: calc(100% - 264px);
+        float: left;
+        .bottom-charts-container {
+            .bar-chart {
+                width: 60%;
+                float: left;
             }
-            /* Responsive: Portrait tablets and up */
+            .doughnut-chart {
+                width: 30%;
+                float: left;
+            }
+        }
+    }
+}
 
-            @media screen and (min-width: 768px) {
-                .container {
-                    max-width: 730px;
-                }
-                /* Remove the padding we set earlier */
-                .header,
-                .marketing,
-                .footer {
-                    padding-left: 0;
-                    padding-right: 0;
-                }
-                /* Space out the masthead */
-                .header {
-                    margin-bottom: 30px;
-                }
-                /* Remove the bottom border on the jumbotron for visual effect */
-                .jumbotron {
-                    border-bottom: 0;
-                }
+@media screen and (max-width: 768px) {
+    header {
+        background-color: $copyColor;
+    }
+    aside {
+        display: none;
+    }
+    section {
+        width: 100%;
+        .bottom-charts-container {
+            .bar-chart {
+                width: 100%;
             }
+            .doughnut-chart {
+                width: 100%;
+            }
+        }
+    }
+}

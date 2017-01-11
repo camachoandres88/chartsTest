@@ -42,13 +42,14 @@
 
             for (var i = 0; i < baseData.length; i++) {
                 doughnutData.labels.push(baseData[i].zoneId);
-                doughnutData.data.push(baseData[i].data.speed);
+                doughnutData.data.push(baseData[i].data.speed * getRandomInt(1, 10));
             }
             doughnutData.options = {
                 legend: {
                     display: true,
                     position: 'bottom'
-                }
+                },
+                responsive: true
             };
 
             return doughnutData;
@@ -62,12 +63,13 @@
             for (var i = 0; i < baseData.length; i++) {
                 barData.series.push(baseData[i].zoneId);
                 barData.labels.push(baseData[i].zoneId);
-                barData.data.push(baseData[i].data.count);
+                barData.data.push(baseData[i].data.count * getRandomInt(1, 10));
             }
             barData.options = {
                 legend: {
                     display: false,
-                }
+                },
+                responsive: true
             };
 
             return barData;
@@ -87,7 +89,8 @@
                     display: true,
                     position: 'right'
 
-                }
+                },
+                responsive: true
             };
 
             return barData;
