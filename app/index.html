@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+</head>
+
+<body ng-app="chartsTestApp">
+    <header>
+        <div class="copy-rockker-labs">
+            <img src="images/r-3-l-logo-application-02.png" srcset="images/r-3-l-logo-application-02@2x.png 2x,
+             images/r-3-l-logo-application-02@3x.png 3x">
+        </div>
+    </header>
+    <aside>
+        <div ng-include="'views/main/aside.template.html'"></div>
+    </aside>
+    <section>
+        <div ui-view="" ng-cloak></div>
+    </section>
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/chart.js/dist/Chart.js"></script>
+    <script src="bower_components/angular-chart.js/dist/angular-chart.js"></script>
+    <script src="bower_components/moment/moment.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+
+    <script src="scripts/modules/modules.module.js"></script>
+    <script src="scripts/modules/analytics/analytics.module.js"></script>
+    <script src="scripts/modules/analytics/analytics.router.js"></script>
+    <script src="scripts/modules/analytics/analytics.controller.js"></script>
+    <script src="scripts/modules/analytics/charts.config.js"></script>
+
+    <script src="scripts/services/services.module.js"></script>
+    <script src="scripts/services/chart.service.js"></script>
+
+    <script src="scripts/directives/directives.module.js"></script>
+    <script src="scripts/directives/charts/charts.module.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/config/app.router.js"></script>
+    <!-- endbuild -->
+</body>
+
+</html>
